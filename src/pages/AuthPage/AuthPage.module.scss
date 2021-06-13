@@ -1,0 +1,37 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.authSection {
+  display: flex;
+  flex-flow: column;
+  background: url('../../images/mobile/back-wave-bottom.png');
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  @include for-size(tablet) {
+    background: url('../../images/tablet/back-widewave-bottom.png');
+  }
+  @include for-size(tablet) {
+    background: url('../../images/desktop/bottomwaves-desk.png');
+  }
+}
+.loginBtn,
+.registerBtn {
+  font-size: 18px; 
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  color: $blue-color;
+  border: 1px solid $blue-color;
+  border-radius: 19px;
+  background-color: $bgc-grey-color;
+  padding: 10px;
+  margin: 0 auto;
+  width: 207px;
+}
+.loginBtn {
+  margin-bottom: 30px;
+}
+
+.header {
+  margin-top: 70px;
+}
