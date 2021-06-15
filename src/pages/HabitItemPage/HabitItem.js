@@ -7,4 +7,3 @@ const HabitItem = () => {
 }
 
 export default HabitItem;
-
