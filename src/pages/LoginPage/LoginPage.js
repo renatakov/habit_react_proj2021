@@ -22,7 +22,7 @@ export default function LoginPage() {
   const handleSubmit = event => {
     event.preventDefault();
     setSubmitted(true);
-    dispatch(login(phone));
+    dispatch(login({ phoneNumber: phone, password: pass }));
     setPhone('');
   };
 

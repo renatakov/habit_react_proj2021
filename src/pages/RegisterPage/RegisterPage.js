@@ -61,6 +61,7 @@ export default function RegisterPage() {
     setLastName('');
     setPhone('');
     setPass('');
+    history.push('/user');
   };
   return (
     <div className={styles.formjs}>
