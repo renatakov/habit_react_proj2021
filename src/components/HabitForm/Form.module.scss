@@ -2,7 +2,7 @@
   background-color: white;
   display: flex;
   flex-flow: column;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 .formHeader {
@@ -48,18 +48,19 @@
 .input {
   font-size: 14px;
   letter-spacing: 1px;
-  color: rgba(234, 231, 242, 0.5019607843137255);
+  color: purple;
   font-family: 'Candara';
   border-top: none;
   border-left: none;
   border-right: none;
   background-color: transparent;
   padding: 8px 20px;
-  font-weight: 300;
+  font-weight: bold;
   border-bottom: 1px solid white;
+  outline: none;
 }
 .input::placeholder {
-  color: purple;
+  color: rgba(234, 231, 242, 0.5019607843137255);
   font-weight: bold;
 }
 .formBody {
@@ -104,9 +105,14 @@
 .input1 {
   font-size: 18px;
   letter-spacing: 1px;
-  color: #cbcbcb;
+  color: purple;
   font-weight: 300;
   font-family: 'Source Sans Roman';
+  outline: none;
+}
+
+.input1::placeholder {
+  color: rgba(234, 231, 242, 0.5019607843137255);
 }
 
 .motiv {

@@ -7,16 +7,16 @@
   background: url('../../images/mobile/back-wave-bottom.png');
   background-repeat: no-repeat;
   background-position-y: 100%;
-  @include for-size(tablet) {
-    background: url('../../images/tablet/back-widewave-bottom.png');
-  }
-  @include for-size(tablet) {
-    background: url('../../images/desktop/bottomwaves-desk.png');
-  }
+  // @include for-size(tablet) {
+  //   background: url('../../images/tablet/back-widewave-bottom.png');
+  // }
+  // @include for-size(tablet) {
+  //   background: url('../../images/desktop/bottomwaves-desk.png');
+  // }
 }
 .loginBtn,
 .registerBtn {
-  font-size: 18px; 
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   letter-spacing: 0.01em;

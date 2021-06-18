@@ -119,51 +119,51 @@
   /* media */
 }
 
-@media screen and (min-width: 720px) {
-  #habitInfo_main-title {
-    padding: 0 0 5% 0;
-    font-size: 25px;
-  }
+// @media screen and (min-width: 720px) {
+//   #habitInfo_main-title {
+//     padding: 0 0 5% 0;
+//     font-size: 25px;
+//   }
 
-  .habitInfoDeleteButton {
-    margin-right: 35px;
-    width: 55%;
-  }
-  .habitsCalendar {
-    margin: 10px auto;
-    width: 600px;
-    text-align: center;
-  }
-  .habitInfoMainProgress {
-    font-size: 60px;
-    
-  }
-  // #habitInfo_table_calendar tbody td {
-  //   font-size: 20px;
-  // }
-  /* media */
-}
+//   .habitInfoDeleteButton {
+//     margin-right: 35px;
+//     width: 55%;
+//   }
+//   .habitsCalendar {
+//     margin: 10px auto;
+//     width: 600px;
+//     text-align: center;
+//   }
+//   .habitInfoMainProgress {
+//     font-size: 60px;
 
-@media screen and (min-width: 1024px) {
-  #habitInfo_habitName {
-    font-size: 32px;
-    margin: 28px 0 0 0;
-  }
-  #habitInfo_main-title {
-    padding: 0 0 8% 0;
-  }
-  // #habitInfo_table_calendar tbody td {
-  //   font-size: 23px;
-  // }
-  .habitsCalendar {
-    width: 800px;
-    margin-right: 60px;
-    text-align: center;
-  }
-  .habitInfo-button {
-    margin: 1% 20% 0 20%;
-    font-size: 25px;
-  }
+//   }
+//   // #habitInfo_table_calendar tbody td {
+//   //   font-size: 20px;
+//   // }
+//   /* media */
+// }
 
-  /* media */
-}
+// @media screen and (min-width: 1024px) {
+//   #habitInfo_habitName {
+//     font-size: 32px;
+//     margin: 28px 0 0 0;
+//   }
+//   #habitInfo_main-title {
+//     padding: 0 0 8% 0;
+//   }
+//   // #habitInfo_table_calendar tbody td {
+//   //   font-size: 23px;
+//   // }
+//   .habitsCalendar {
+//     width: 800px;
+//     margin-right: 60px;
+//     text-align: center;
+//   }
+//   .habitInfo-button {
+//     margin: 1% 20% 0 20%;
+//     font-size: 25px;
+//   }
+
+//   /* media */
+// }
