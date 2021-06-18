@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/HabitItemPage/HabitItem.js"],"names":["HabitItem"],"mappings":"8HAAA,uBAQeA,UANG,WAChB,OACE","file":"static/js/8.b2a36327.chunk.js","sourcesContent":["import React from \"react\";\r\n\r\nconst HabitItem = () => {\r\n  return(\r\n    <h1>HabitItem</h1>\r\n  )\r\n}\r\n\r\nexport default HabitItem;"],"sourceRoot":""}
