@@ -3,12 +3,14 @@ import { Switch } from 'react-router-dom';
 import { Suspense, useEffect } from 'react';
 import './App.css';
 import { updateUser } from './redux/auth/operations';
+import { getAllHAbits } from './redux/habits/operations';
 import { useDispatch } from 'react-redux';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(updateUser());
+    dispatch(getAllHAbits());
   }, []);
   return (
     <div className="App">

@@ -7,8 +7,8 @@ import classes from './Form.module.scss';
 export default function From({ handleClose }) {
   const [name, setName] = useState('');
   const [motivation, setMotivation] = useState('');
-  const [color, setColor] = useState('#9f40c5');
-  const [repeat, setRepeat] = useState(24);
+  const [color, setColor] = useState('');
+  const [repeat, setRepeat] = useState('');
   const [remindMe, setRemindMe] = useState(true);
   const [habits, setHabits] = useState([]);
 
@@ -56,6 +56,7 @@ export default function From({ handleClose }) {
 
     // localStorage.setItem('habit', JSON.stringify(habits));
     reset();
+    handleClose();
   };
   const reset = () => {
     setName('');
@@ -96,18 +97,19 @@ export default function From({ handleClose }) {
 
         <label htmlFor="button" className={classes.label}>
           Повторять
-          {/* <select
+          <select
             className={classes.option}
             onChange={handleChange}
             name="repeat"
-          > */}
-          <input
-            type="number"
-            name="repeat"
-            onChange={handleChange}
-            value={repeat}
-            placeholder="Интервал в часах между повторениями"
-          />
+          >
+            <option value="day" selected>
+              Каждый день
+            </option>
+            <option value="week">Каждую неделю</option>
+            <option selected value="month">
+              Каждый месяц
+            </option>
+          </select>
         </label>
         <label htmlFor="numberInput" className={classes.label}>
           Выбери цвет
@@ -118,20 +120,26 @@ export default function From({ handleClose }) {
           >
             <option
               selected
-              value="#00ffff"
+              value="cyan"
               className={classes.color1}
+              // name="color"
+              // onChange={handleChange}
             >
               color 1
             </option>
             <option
-              value="#c0024a"
+              value="blue"
               className={classes.color2}
+              // name="color"
+              // onChange={handleChange}
             >
               color 2
             </option>
             <option
-                value="#390093"
-                className={classes.color3}
+              value="red"
+              className={classes.color3}
+              // onChange={handleChange}
+              // name="color"
             >
               color 3
             </option>
@@ -162,6 +170,7 @@ export default function From({ handleClose }) {
         <button
           className={classes.save}
           type="submit"
+          onClick={handleSubmit}
           // disabled={!name.length || !habit.length}
         >
           Сохранить

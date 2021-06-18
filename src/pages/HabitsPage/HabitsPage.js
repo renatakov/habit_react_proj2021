@@ -6,24 +6,14 @@ import Form from '../../components/HabitForm/HabitForm';
 
 import { Link } from 'react-router-dom';
 import image from '../../images/camera.png';
-import { getAllHabits } from '../../redux/habits/operations';
+import { getAllHAbits } from '../../redux/habits/operations';
 import { connect } from 'react-redux';
 import { habits } from '../../redux/habits/selectors';
-//{
-//   id: '1',
-//   name: 'зарядка',
-//   perfomance: '50%',
-// },
-// {
-//   id: '2',
-//   name: 'зарядка2',
-//   perfomance: '50%',
-// },
 
 class HabitPage extends Component {
   state = {
     showModal: false,
-    habitsList: [],
+    habitsList: [...this.props.habits.habits],
   };
 
   componentDidMount() {}
@@ -32,6 +22,7 @@ class HabitPage extends Component {
     this.setState({ showModal: !this.state.showModal });
   };
   render() {
+    console.log(this.state.habitsList);
     const { habitsList } = this.state;
     return (
       <section className={styles.habitPage}>
@@ -51,7 +42,7 @@ class HabitPage extends Component {
           <h1 className={styles.text}>Привычки</h1>
           <input type="date" name="calendar" />
         </div>
-        {this.props.habits.length <= 0 ? (
+        {habitsList.length <= 0 ? (
           <p className={styles.defaultText}>
             У вас пока нет привычек <br />
             Нажмите +, чтобы <br />
@@ -59,10 +50,12 @@ class HabitPage extends Component {
           </p>
         ) : (
           <ul>
-            {this.props.habits.map(habit => {
+            {this.state.habitsList.map(habit => {
               return (
                 <li className={styles.habitItem} key={habit.id}>
-                  <Link to="/habitItem">{habit.name}</Link>
+                  <Link to="/habitItem">
+                    <div>{habit.name}</div>
+                  </Link>
                 </li>
               );
             })}
@@ -74,13 +67,12 @@ class HabitPage extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  habits: habits(state),
+const mapStateToProps = state => ({
+  habits: state.habits,
 });
 
-
 const mapDispatchToProps = {
-  getAllHabits: getAllHabits,
+  getAllHAbits: getAllHAbits,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HabitPage);
