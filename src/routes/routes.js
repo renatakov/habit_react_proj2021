@@ -45,7 +45,7 @@ export default [
   },
   {
     component: lazy(() => import('../pages/HabitItemPage/HabitItem')),
-    path: '/habitItem',
+    path: '/habits/:id',
     exact: true,
     key: uuid(),
     private: true,

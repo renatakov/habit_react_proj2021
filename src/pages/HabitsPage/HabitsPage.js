@@ -62,7 +62,7 @@ class HabitPage extends Component {
             {this.props.habits.map(habit => {
               return (
                 <li className={styles.habitItem} key={habit.id}>
-                  <Link to="/habitItem">{habit.name}</Link>
+                  <Link to={`/habits/${habit.id}`}>{habit.name}</Link>
                 </li>
               );
             })}
