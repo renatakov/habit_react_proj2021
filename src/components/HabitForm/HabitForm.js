@@ -7,8 +7,8 @@ import classes from './Form.module.scss';
 export default function From({ handleClose }) {
   const [name, setName] = useState('');
   const [motivation, setMotivation] = useState('');
-  const [color, setColor] = useState('');
-  const [repeat, setRepeat] = useState('');
+  const [color, setColor] = useState('#9f40c5');
+  const [repeat, setRepeat] = useState(24);
   const [remindMe, setRemindMe] = useState(true);
   const [habits, setHabits] = useState([]);
 
@@ -96,19 +96,18 @@ export default function From({ handleClose }) {
 
         <label htmlFor="button" className={classes.label}>
           Повторять
-          <select
+          {/* <select
             className={classes.option}
             onChange={handleChange}
             name="repeat"
-          >
-            <option value="day" selected>
-              Каждый день
-            </option>
-            <option value="week">Каждую неделю</option>
-            <option selected value="month">
-              Каждый месяц
-            </option>
-          </select>
+          > */}
+          <input
+            type="number"
+            name="repeat"
+            onChange={handleChange}
+            value={repeat}
+            placeholder="Интервал в часах между повторениями"
+          />
         </label>
         <label htmlFor="numberInput" className={classes.label}>
           Выбери цвет
@@ -119,26 +118,20 @@ export default function From({ handleClose }) {
           >
             <option
               selected
-              value="cyan"
+              value="#00ffff"
               className={classes.color1}
-              // name="color"
-              // onChange={handleChange}
             >
               color 1
             </option>
             <option
-              value="blue"
+              value="#c0024a"
               className={classes.color2}
-              // name="color"
-              // onChange={handleChange}
             >
               color 2
             </option>
             <option
-              value="red"
-              className={classes.color3}
-              // onChange={handleChange}
-              // name="color"
+                value="#390093"
+                className={classes.color3}
             >
               color 3
             </option>
