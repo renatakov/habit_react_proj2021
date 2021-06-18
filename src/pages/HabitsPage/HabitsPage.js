@@ -46,7 +46,7 @@ class HabitPage extends Component {
             добавить первую
           </p>
         ) : (
-          <ul>
+          <ul className={styles.listOfHabits}>
             {this.props.habits.map(habit => {
               return (
                 <li className={styles.habitItem} key={habit.id}>
