@@ -13,7 +13,7 @@ function App() {
     dispatch(getAllHAbits());
   }, []);
   return (
-    <div className="App" style={{'width': 320}}>
+    <div className="App" style={{ width: 320 }}>
       <Suspense fallback="...">
         <Switch>
           {routes.map(item => {
