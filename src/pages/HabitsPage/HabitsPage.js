@@ -50,7 +50,7 @@ class HabitPage extends Component {
           </p>
         ) : (
           <ul>
-            {this.state.habitsList.map(habit => {
+            {this.props.habits.habits.map(habit => {
               return (
                 <li className={styles.habitItem} key={habit.id}>
                   <Link to={`/habits/${habit.id}`}>{habit.name}</Link>
