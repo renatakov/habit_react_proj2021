@@ -35,11 +35,11 @@ export default function HabitItem({ match, history }) {
             <span>50</span>%
           </p>
           <h3>График развития привычки</h3>
-          <div>
+          {/* <div>
             <button>С начала</button>
             <button>Неделя</button>
             <button>Месяц</button>
-          </div>
+          </div> */}
           <div>
             <Line createdAt={habitInfo.createdAt} />
           </div>
