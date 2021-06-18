@@ -48,7 +48,7 @@
 .input {
   font-size: 14px;
   letter-spacing: 1px;
-  color: white;
+  color: rgba(234, 231, 242, 0.5019607843137255);
   font-family: 'Candara';
   border-top: none;
   border-left: none;
@@ -59,7 +59,7 @@
   border-bottom: 1px solid white;
 }
 .input::placeholder {
-  color: white;
+  color: purple;
   font-weight: bold;
 }
 .formBody {
