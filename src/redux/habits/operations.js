@@ -41,7 +41,7 @@ export const addHabit = habitData => async dispatch => {
     dispatch(habitAddError(error.message));
   }
 };
-export const getAllHabits = () => async dispatch => {
+export const getAllHAbits = () => async dispatch => {
   dispatch(getAllHabitsRequest());
   try {
     const response = await axios.get('/habits');
