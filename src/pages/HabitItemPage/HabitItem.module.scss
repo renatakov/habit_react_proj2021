@@ -48,18 +48,19 @@
     padding-bottom: 15%;
   }
 
-  #habitInfo_main-progress {
+  .habitInfoMainProgress {
     font-size: 45px;
   }
 
-  #habitInfo_footer {
-    position: absolute;
+  .habitInfoFooter {
+    // position: absolute;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
     bottom: 0px;
-    width: 100%;
+    width: 60%;
+    margin-right: 60px;
   }
 
   .habitInfoDeleteButton {
@@ -71,46 +72,49 @@
     border: 1px solid #000000;
     border-radius: 35px;
     padding: 15px;
-    width: 230px;
+    width: 200px;
   }
-  #habitInfo_table_calendar {
+  // #habitInfo_table_calendar {
+
+  // }
+  .habitsCalendar {
     margin: 10px auto;
     width: 85%;
     text-align: center;
   }
-  #habitInfo_table_calendar thead tr:last-child {
-    font-size: 20px;
-    color: #4b2486;
-    font-family: 'Myriad Pro';
-    text-align: center;
-  }
-  #habitInfo_table_calendar thead tr:nth-child(1) td:nth-child(1):hover,
-  #habitInfo_calendar_table thead tr:nth-child(1) td:nth-child(3):hover {
-    cursor: pointer;
-  }
-  #habitInfo_table_calendar thead tr:nth-child(1) td:nth-child(2) {
-    font-size: 30px;
-    color: #400688;
-    font-family: 'Candara';
-  }
-  #habitInfo_table_calendar tbody td {
-    font-size: 15px;
+  // #habitInfo_table_calendar thead tr:last-child {
+  //   font-size: 20px;
+  //   color: #4b2486;
+  //   font-family: 'Myriad Pro';
+  //   text-align: center;
+  // }
+  // #habitInfo_table_calendar thead tr:nth-child(1) td:nth-child(1):hover,
+  // #habitInfo_calendar_table thead tr:nth-child(1) td:nth-child(3):hover {
+  //   cursor: pointer;
+  // }
+  // #habitInfo_table_calendar thead tr:nth-child(1) td:nth-child(2) {
+  //   font-size: 30px;
+  //   color: #400688;
+  //   font-family: 'Candara';
+  // }
+  // #habitInfo_table_calendar tbody td {
+  //   font-size: 15px;
 
-    color: #6e6767;
-    font-family: 'Myriad Pro';
-    text-align: center;
-  }
-  #habitInfo_table_calendar tbody td:nth-child(n + 6),
-  #calendar2 .holiday {
-    color: rgb(231, 140, 92);
-  }
-  #habitInfo_table_calendar tbody td.today {
-    width: 12px;
-    background: #400688;
-    border: #400688 solid 5px;
-    border-radius: 400px;
-    color: #fff;
-  }
+  //   color: #6e6767;
+  //   font-family: 'Myriad Pro';
+  //   text-align: center;
+  // }
+  // #habitInfo_table_calendar tbody td:nth-child(n + 6),
+  // #calendar2 .holiday {
+  //   color: rgb(231, 140, 92);
+  // }
+  // #habitInfo_table_calendar tbody td.today {
+  //   width: 12px;
+  //   background: #400688;
+  //   border: #400688 solid 5px;
+  //   border-radius: 400px;
+  //   color: #fff;
+  // }
 
   /* media */
 }
@@ -125,18 +129,18 @@
     margin-right: 35px;
     width: 55%;
   }
-
-  #habitInfo_table_calendar {
+  .habitsCalendar {
     margin: 10px auto;
     width: 600px;
     text-align: center;
   }
-  #habitInfo_main-progress {
+  .habitInfoMainProgress {
     font-size: 60px;
+    
   }
-  #habitInfo_table_calendar tbody td {
-    font-size: 20px;
-  }
+  // #habitInfo_table_calendar tbody td {
+  //   font-size: 20px;
+  // }
   /* media */
 }
 
@@ -148,12 +152,12 @@
   #habitInfo_main-title {
     padding: 0 0 8% 0;
   }
-  #habitInfo_table_calendar tbody td {
-    font-size: 23px;
-  }
-  #habitInfo_table_calendar {
+  // #habitInfo_table_calendar tbody td {
+  //   font-size: 23px;
+  // }
+  .habitsCalendar {
     width: 800px;
-    margin: 0;
+    margin-right: 60px;
     text-align: center;
   }
   .habitInfo-button {
