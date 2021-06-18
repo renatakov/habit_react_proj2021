@@ -8,7 +8,7 @@ export default function From({ handleClose }) {
   const [name, setName] = useState('');
   const [motivation, setMotivation] = useState('');
   const [color, setColor] = useState('#9f40c5');
-  const [repeat, setRepeat] = useState(24);
+  const [repeat, setRepeat] = useState();
   const [remindMe, setRemindMe] = useState(true);
   const [habits, setHabits] = useState([]);
 
@@ -31,7 +31,7 @@ export default function From({ handleClose }) {
         setColor(value);
         break;
       case 'repeat':
-        setRepeat(1);
+        setRepeat();
         break;
       case 'remindMe':
         setRemindMe(checked);
@@ -48,7 +48,7 @@ export default function From({ handleClose }) {
       name,
       motivation,
       color,
-      repeat,
+      repeat: 1,
       remindMe,
     };
     console.log(habit);
@@ -63,6 +63,7 @@ export default function From({ handleClose }) {
     setColor('');
     setRepeat('');
     setRemindMe(true);
+    handleClose()
   };
   return (
     <div className={classes.modal}>
@@ -107,6 +108,7 @@ export default function From({ handleClose }) {
             onChange={handleChange}
             value={repeat}
             placeholder="Интервал в часах между повторениями"
+            className={classes.repeat}
           />
         </label>
         <label htmlFor="numberInput" className={classes.label}>
