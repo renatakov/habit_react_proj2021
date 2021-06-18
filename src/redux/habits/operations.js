@@ -7,6 +7,9 @@ import {
   habitAddSuccess,
   getAllHabitsError,
   habitAddError,
+  habitDeleteRequest,
+  habitDeleteSuccess,
+  habitDeleteError,
 } from './actions';
 // !!! URL
 axios.defaults.baseURL = 'https://goiteens-habits.herokuapp.com/api';
@@ -50,6 +53,19 @@ export const getAllHAbits = () => async dispatch => {
   } catch (err) {
     console.log(err.message);
     dispatch(getAllHabitsError(err.message));
+  }
+};
+
+export const deleteHabit = (id, history) => async dispatch => {
+  dispatch(habitDeleteRequest());
+  try {
+    const response = await axios.delete(`/habits/${id}`);
+    const data = response.data;
+    dispatch(habitDeleteSuccess(id));
+    history.push('/habits')
+  } catch (err) {
+    console.log(err.message);
+    dispatch(habitDeleteError(err.message));
   }
 };
 

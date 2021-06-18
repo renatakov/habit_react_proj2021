@@ -6,9 +6,14 @@ import 'react-calendar/dist/Calendar.css';
 import Line from './Line';
 import axios from 'axios';
 
-export default function HabitItem({ match }) {
+import { deleteHabit } from '../../redux/habits/operations';
+import { useDispatch } from 'react-redux';
+
+export default function HabitItem({ match, history }) {
   const [value, onChange] = useState(new Date());
   const [habitInfo, setHabitInfo] = useState(null);
+  const dispatch = useDispatch()
+
   useEffect(() => {
     axios.get(`/habits/${match.params.id}`).then(data => {
       setHabitInfo(data.data);
@@ -45,7 +50,7 @@ export default function HabitItem({ match }) {
             <button className={style.habitInfoDeleteButton}>
               Удалить прогресс
             </button>
-            <button className={style.habitInfoDeleteButton}>
+            <button onClick={() => dispatch(deleteHabit(habitInfo.id, history))} className={style.habitInfoDeleteButton}>
               Удалить привычку
             </button>
           </div>

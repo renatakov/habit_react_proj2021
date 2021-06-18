@@ -22,11 +22,11 @@ const initState = {
   remind: false,
 };
 
-const habit = createReducer(initState, {
-  [habitAddSuccess]: (_, action) => action.payload,
-  [habitUpdateSuccess]: (_, action) => action.payload,
-  [habitDeleteSuccess]: () => initState,
-});
+// const habit = createReducer(initState, {
+//   [habitAddSuccess]: (_, action) => action.payload,
+//   [habitUpdateSuccess]: (_, action) => action.payload,
+//   [habitDeleteSuccess]: () => initState,
+// });
 
 const habitsState = [];
 
@@ -45,29 +45,34 @@ const habitError = createReducer(null, {
   },
 });
 
-const allHabits = createReducer(habitsState, {
-  [getAllHabitsSuccess]: (_, action) => {
-    return action.payload;
-  },
-  [habitAddSuccess]: (habitsState, action) => {
-    return [...habitsState, action.payload];
-  },
-  [habitDeleteSuccess]: (habitsState, action) => {
-    return habitsState.filter(habit => {
-      return habit.id !== action.payload;
-    });
-  },
-  [habitUpdateSuccess]: (habitsState, action) => {
-    return habitsState.map(habit => {
-      return habit.id === action.payload.id ? action.payload : habit;
-    });
-  },
-});
+// const allHabits = createReducer(habitsState, {
+//   [getAllHabitsSuccess]: (_, action) => {
+//     return action.payload;
+//   },
+//   [habitAddSuccess]: (habitsState, action) => {
+//     return [...habitsState, action.payload];
+//   },
+//   [habitDeleteSuccess]: (habitsState, action) => {
+//     return habitsState.filter(habit => {
+//       return habit.id !== action.payload;
+//     });
+//   },
+//   [habitUpdateSuccess]: (habitsState, action) => {
+//     return habitsState.map(habit => {
+//       return habit.id === action.payload.id ? action.payload : habit;
+//     });
+//   },
+// });
 
 const state = [];
 const habits = createReducer(state, {
   [getAllHabitsSuccess]: (_, { payload }) => payload,
   [habitAddSuccess]: (state, { payload }) => [...state, payload],
+  [habitDeleteSuccess]: (habitsState, action) => {
+    return habitsState.filter(habit => {
+      return habit.id !== action.payload;
+    });
+  },
 });
 
 export default combineReducers({

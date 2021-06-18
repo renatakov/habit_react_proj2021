@@ -13,7 +13,6 @@ import { habits } from '../../redux/habits/selectors';
 class HabitPage extends Component {
   state = {
     showModal: false,
-    habitsList: [...this.props.habits.habits],
   };
 
   componentDidMount() {}
@@ -22,8 +21,6 @@ class HabitPage extends Component {
     this.setState({ showModal: !this.state.showModal });
   };
   render() {
-    console.log(this.state.habitsList);
-    const { habitsList } = this.state;
     return (
       <section className={styles.habitPage}>
         <div className={styles.top}>
@@ -42,7 +39,7 @@ class HabitPage extends Component {
           <h1 className={styles.text}>Привычки</h1>
           <input type="date" name="calendar" />
         </div>
-        {habitsList.length <= 0 ? (
+        {this.props.habits.length <= 0 ? (
           <p className={styles.defaultText}>
             У вас пока нет привычек <br />
             Нажмите +, чтобы <br />
@@ -50,7 +47,7 @@ class HabitPage extends Component {
           </p>
         ) : (
           <ul>
-            {this.props.habits.habits.map(habit => {
+            {this.props.habits.map(habit => {
               return (
                 <li className={styles.habitItem} key={habit.id}>
                   <Link to={`/habits/${habit.id}`}>{habit.name}</Link>
@@ -66,7 +63,7 @@ class HabitPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  habits: state.habits,
+  habits: state.habits.habits,
 });
 
 const mapDispatchToProps = {
