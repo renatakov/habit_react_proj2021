@@ -5,7 +5,7 @@ const data = {
   labels: ['19.06', '20.06', '22.06', '23.06', '25.06', '26.06'],
   datasets: [
     {
-      data: [12, 19, 3, 5, 2, 3],
+      data: [6, 10, 5, 3, 9, 10],
       fill: false,
       backgroundColor: 'rgb(173, 129, 209)',
       borderColor: 'rgba(255, 99, 132, 0.2)',
