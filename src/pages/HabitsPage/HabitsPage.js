@@ -5,6 +5,8 @@ import Modal from '../../components/Modal/Modal';
 import Form from '../../components/HabitForm/HabitForm';
 
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
 import image from '../../images/camera.png';
 import { getAllHAbits } from '../../redux/habits/operations';
 import { connect } from 'react-redux';
@@ -25,6 +27,7 @@ class HabitPage extends Component {
       <section className={styles.habitPage}>
         <div className={styles.top}>
           <img src={image} className={styles.camera} alt="logo" />
+
           <button onClick={this.showModal} className={styles.btn}>
             &#43;
           </button>
@@ -35,6 +38,12 @@ class HabitPage extends Component {
             </Modal>
           )}
         </div>
+        <div className="logout">
+          {/* <NavLink to="/">
+            <button>&#8592; Выйти</button>
+          </NavLink> */}
+        </div>
+
         <div id="calendar" className={styles.calendar}>
           <h1 className={styles.text}>Привычки</h1>
           <input type="date" name="calendar" />
