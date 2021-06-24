@@ -7,6 +7,22 @@
     background-color: #ffff;
   }
 
+  .getBackBtn {
+    display: block;
+    margin: 20px auto;
+    background-color: rgba(234, 231, 242, 0.5019607843137255);
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #3e1687;
+    font-weight: bold;
+    font-family: 'Candara';
+    padding: 10px 38px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    margin-right: 150px;
+    margin-bottom: 25px;
+  }
+
   .habitInfo_header {
     height: 65px;
     display: flex;

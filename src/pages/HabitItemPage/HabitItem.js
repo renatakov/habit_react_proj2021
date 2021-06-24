@@ -25,7 +25,7 @@ export default function HabitItem({ match, history }) {
         <>
           <header>
             <NavLink to="/habits">
-              <button>&#8592;Назад</button>
+              <button className={style.getBackBtn}>&#8592;Назад</button>
             </NavLink>
             <h1>{habitInfo.name}</h1>
             <button>Исправить</button>
