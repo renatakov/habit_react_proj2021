@@ -38,11 +38,11 @@ class HabitPage extends Component {
             </Modal>
           )}
         </div>
-        <div className="logout">
+        {/* <div className="logout"> */}
           {/* <NavLink to="/">
             <button>&#8592; Выйти</button>
           </NavLink> */}
-        </div>
+        {/* </div> */}
 
         <div id="calendar" className={styles.calendar}>
           <h1 className={styles.text}>Привычки</h1>
