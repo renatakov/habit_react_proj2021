@@ -1,5 +1,6 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
+
 .top {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -150,7 +151,7 @@
   //   font-size: 250%;
   // }
 }
-.listOfHabits{
+.listOfHabits {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,4 +179,18 @@
   //   margin-left: 850px;
   //   font-size: 250%;
   // }
+}
+.logoutBtn {
+  display: block;
+  margin: 20px auto;
+  background-color: rgba(234, 231, 242, 0.5019607843137255);
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #3e1687;
+  font-weight: bold;
+  font-family: 'Candara';
+  padding: 10px 38px;
+  border: 1px solid $blue-color;
+  margin-right: 150px;
+  margin-bottom: 25px;
 }

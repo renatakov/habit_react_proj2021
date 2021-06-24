@@ -46,8 +46,11 @@ class HabitPage extends Component {
               </Modal>
             )}
           </div>
+
           <div className="logout">
-            <button onClick={this.handleSubmit}>&#8592; Выйти</button>
+            <button onClick={this.handleSubmit} className={styles.logoutBtn}>
+              &#8592; Выйти
+            </button>
           </div>
 
           <div id="calendar" className={styles.calendar}>
