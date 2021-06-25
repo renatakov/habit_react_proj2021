@@ -50,17 +50,19 @@ class HabitPage extends Component {
               </Modal>
             )}
           </div>
+{/* 
+          <div className={styles.hamburgerMenu}>
+            <input className={styles.menu__toggle} type="checkbox" />
+            <label className={styles.menu__btn} htmlFor="menu__toggle">
+              <span></span>
+            </label> */}
 
-          <div className={styles.container} onClick={this.myFunction}>
-            <div className={styles.dropdown}>
-              <div className={styles.bar1} id="#myDropDown"></div>
-              <div className={styles.bar2}></div>
-              <div className={styles.bar3}></div>
+            {/* <ul className={styles.menu__box}> */}
               <button onClick={this.handleSubmit} className={styles.logoutBtn}>
                 &#8592; Выйти
               </button>
-            </div>
-          </div>
+            {/* </ul>
+          </div> */}
 
           <div id="calendar" className={styles.calendar}>
             <h1 className={styles.text}>Привычки</h1>
