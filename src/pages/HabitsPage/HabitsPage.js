@@ -29,6 +29,10 @@ class HabitPage extends Component {
     event.preventDefault();
     this.props.logout();
   };
+  myFunction = x => {
+    x.target.classList.toggle(styles.change);
+  };
+
   render() {
     return (
       <>
@@ -47,10 +51,15 @@ class HabitPage extends Component {
             )}
           </div>
 
-          <div className="logout">
-            <button onClick={this.handleSubmit} className={styles.logoutBtn}>
-              &#8592; Выйти
-            </button>
+          <div className={styles.container} onClick={this.myFunction}>
+            <div className={styles.dropdown}>
+              <div className={styles.bar1} id="#myDropDown"></div>
+              <div className={styles.bar2}></div>
+              <div className={styles.bar3}></div>
+              <button onClick={this.handleSubmit} className={styles.logoutBtn}>
+                &#8592; Выйти
+              </button>
+            </div>
           </div>
 
           <div id="calendar" className={styles.calendar}>
