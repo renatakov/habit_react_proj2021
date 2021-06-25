@@ -12,7 +12,7 @@ import { useDispatch } from 'react-redux';
 export default function HabitItem({ match, history }) {
   const [value, onChange] = useState(new Date());
   const [habitInfo, setHabitInfo] = useState(null);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     axios.get(`/habits/${match.params.id}`).then(data => {
@@ -27,8 +27,8 @@ export default function HabitItem({ match, history }) {
             <NavLink to="/habits">
               <button className={style.getBackBtn}>&#8592;Назад</button>
             </NavLink>
-            <h1>{habitInfo.name}</h1>
-            <button>Исправить</button>
+            <h1 className={style.habitName}>{habitInfo.name}</h1>
+            <button className={style.editBtn}>Исправить</button>
           </header>
           <h2 className={style.habitInfoMainProgress}>Прогресс</h2>
           <p className={style.habitInfoMainProgress}>
@@ -50,7 +50,10 @@ export default function HabitItem({ match, history }) {
             <button className={style.habitInfoDeleteButton}>
               Удалить прогресс
             </button>
-            <button onClick={() => dispatch(deleteHabit(habitInfo.id, history))} className={style.habitInfoDeleteButton}>
+            <button
+              onClick={() => dispatch(deleteHabit(habitInfo.id, history))}
+              className={style.habitInfoDeleteButton}
+            >
               Удалить привычку
             </button>
           </div>
